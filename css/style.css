@@ -4,6 +4,7 @@ body{
     font-size: 20px;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 #navigation{
@@ -29,4 +30,32 @@ body{
     font-size: 20px;
     padding-top: 16px;
     padding-bottom: 16px;
+}
+
+#navigation .icon-bar {
+    color: white;
+}
+
+#head{
+    background: url(../img/beachshowcase.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #4E4D4A;
+    
+}
+
+#head h1{
+    font-size: 32px;
+    line-height:1.2;
+}
+
+#head p{
+    font-size:20px;
 }

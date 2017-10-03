@@ -59,3 +59,46 @@ body{
 #head p{
     font-size:20px;
 }
+
+.current{
+    width: 100%;
+    background-color: #4E4D4A;
+    margin-bottom: 0px;
+}
+
+.current h2{
+    margin-top: 100px;
+    font-size: 40px;
+    color: #FF8C18;
+}
+
+.current h3{
+    color: #4E4D4A;
+    text-transform: uppercase;
+}
+
+#divCity{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+#submitCity{
+    background-color: #4E4D4A;
+    border-color: transparent;
+    height: 40px;
+    font-weight: bold;
+}
+
+#submitCity:hover{
+    background-color: #FF8C18; 
+    color: #4E4D4A;
+    transition: background 1s;
+    border-color: transparent;
+}
+
+input[type='text']{
+    height: 40px;
+    font-size: 20px;    
+    border: 1px solid #FF8C18;
+}

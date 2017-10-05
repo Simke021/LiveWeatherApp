@@ -34,14 +34,16 @@ function getWeather(){
     }
     // return error message
     else{
-        $("error").html("<div>City field can not be empty!</div>")
+        $("#error").html("<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times</a><strong>Error! </strong>City field can not be empty!</div>");
     }
 }
 
 // show data form api
 function showResults(data){
     return "<h3>Current weather for " + data.name + ", " + data.sys.country +"</h3>" +
-           "<p>Temperature: " + data.main.temp + " &deg;C</p>" +
+    "<p>Weather description:<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description + "</p>" +
+           "<p>Weather: " + data.weather[0].main + "</p>" + 
+           "<p>Temperature: " + Math.round(data.main.temp) + " &deg;C</p>" +
            "<p>Pressure: " + data.main.pressure + " hPa</p>" +
            "<p>Humidity: " + data.main.humidity + " %</p>" +
            "<p>Min. Temperature: " + data.main.temp_min + " &deg;C</p>" +

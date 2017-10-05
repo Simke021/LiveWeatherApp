@@ -10,6 +10,9 @@
     <!-- Font awesome cdn-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Font awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Custom css-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,7 +22,7 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand navbar-link" href="index.html">
-                    <img src="#" alt=""><span id="brand"><i class="fa fa-sun-o" aria-hidden="true"></i> WEATHER APP</span>               
+                    <span id="brand"><i class="fa fa-sun-o" aria-hidden="true"></i> WEATHER APP</span>               
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                   <span class="sr-only">Toggle navigation</span>
@@ -42,19 +45,54 @@
     <div class="container-fluid">
         <div class="row" id="head">
             <div class="col-md-12" >
-                <h1 class="lead">Welcome to my Weather App</h1>
+                <h1 class="lead">My Weather App is 
+                    <span class="typer" id="main" data-words="great,fun,lightweight,easy" data-colors="orange" data-delay="100" data-deleteDelay="1000"></span>
+                    <span class="cursor" data-owner="main"></span>
+                </h1>
                 <p class="lead">Get weather information of any city</p>
                 <ul class="list-inline" id="list_item">
-                    <li>Temperature</li>
-                    <li>Pressure</li>
-                    <li>Windspeed</li>
-                    <li>Humidity</li>
+                    <li>Temperature |</li>
+                    <li>Pressure |</li>
+                    <li>Windspeed |</li>
+                    <li>Humidity |</li>
                 </ul>
+                    
+                <button class="scroll">Scroll down</button>
             </div>
         </div>          
     </div>
 
-    <div class="footer navbar-fixed-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 items">
+                <div class="text-center icon">
+                    <i class="fa fa-sun-o  fa-3x"></i>
+                </div>
+                <h3 class="text-center">Weather API</h3>
+                <p class="text-center">Use openweathermap API to get weather information of any city.</p>
+            </div>
+
+            <div class="col-sm-4 items">
+                <div class="text-center icon">
+                    <i class="fa fa-chevron-circle-down  fa-3x"></i>
+                </div>
+                <h3 class="text-center">View Result</h3>
+                <p class="text-center">Get information about temperature, pressure, humidity etc...</p>
+            </div>
+
+            <div class="col-sm-4 items">
+                <div class="text-center icon">
+                    <i class="fa fa-search  fa-3x"></i>
+                </div>
+                <h3 class="text-center">Search</h3>
+                <p class="text-center">Search for current weather information and weather forecast.</p>
+            </div>
+
+        </div>
+            
+    </div>
+
+    <div class="footer">
         <div class="container">
             <div class="row">
                 <p class="text-center">Copyright &copy; Weather App <small>by: <i><a href="https://www.facebook.com/aleksandar.ljubisic" target="_blank">Aleksandar Ljubišić</a></i></small></p>
@@ -62,10 +100,33 @@
         </div>
     </div>
 
-
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="typer.js"></script>    
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $('#back-to-top').fadeIn();
+                    } else {
+                        $('#back-to-top').fadeOut();
+                    }
+                });
+                // scroll body to 0px on click
+                $('#back-to-top').click(function () {
+                    $('#back-to-top').tooltip('hide');
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+                
+                $('#back-to-top').tooltip('show');
+
+        });
+    </script>
 </body>
 </html>

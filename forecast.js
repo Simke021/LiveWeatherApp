@@ -35,14 +35,14 @@ function getForecast(){
                         table += "<td><img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'></td>";
                         table += "<td>" + data.list[i].weather[0].main + "</td>";
                         table += "<td>" + data.list[i].weather[0].description + "</td>";
-                        table += "<td>" + data.list[i].temp.morn + "&deg;C</td>";
-                        table += "<td>" + data.list[i].temp.night + "&deg;C</td>";
-                        table += "<td>" + data.list[i].temp.min + "&deg;C</td>";
-                        table += "<td>" + data.list[i].temp.max + "&deg;C</td>";
-                        table += "<td>" + data.list[i].humidity + "hPa</td>";
-                        table += "<td>" + data.list[i].pressure + "%</td>";
-                        table += "<td>" + data.list[i].speed + "m/sec</td>";
-                        table += "<td>" + data.list[i].clouds + "%</td>";
+                        table += "<td>" + data.list[i].temp.morn + " &deg;C</td>";
+                        table += "<td>" + data.list[i].temp.night + " &deg;C</td>";
+                        table += "<td>" + data.list[i].temp.min + " &deg;C</td>";
+                        table += "<td>" + data.list[i].temp.max + " &deg;C</td>";
+                        table += "<td>" + data.list[i].humidity + " hPa</td>";
+                        table += "<td>" + data.list[i].pressure + " %</td>";
+                        table += "<td>" + data.list[i].speed + " m/sec</td>";
+                        table += "<td>" + data.list[i].clouds + " %</td>";
 
                         table += "</tr>";
                     }

@@ -40,8 +40,8 @@ function getWeather(){
 
 // show data form api
 function showResults(data){
-    return "<h3>Current weather for " + data.name + ", " + data.sys.country +"</h3>" +
-    "<p>Weather description:<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description + "</p>" +
+    return "<h3 class='text-center'>Current weather for " + data.name + ", " + data.sys.country +"</h3>" +
+           "<p>Weather description:<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description + "</p>" +
            "<p>Weather: " + data.weather[0].main + "</p>" + 
            "<p>Temperature: " + Math.round(data.main.temp) + " &deg;C</p>" +
            "<p>Pressure: " + data.main.pressure + " hPa</p>" +

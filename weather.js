@@ -17,7 +17,7 @@ function getWeather(){
     // check if input is not empty call ajax request
     if(city != ""){
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/weather?q='+ city +'&units=metric'+ '&APPID=a2f07dfceef2bd84d4266d05988e86be',
+            url: 'https://api.openweathermap.org/data/2.5/weather?q='+ city +'&units=metric'+ '&APPID=a2f07dfceef2bd84d4266d05988e86be',
             type: 'GET',
             dataType: 'jsonp',
             success: function(data){
